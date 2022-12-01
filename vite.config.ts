@@ -5,6 +5,7 @@ import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import dts from 'vite-plugin-dts'
+import svgr from 'vite-plugin-svgr'
 
 import * as packageJson from './package.json'
 
@@ -25,7 +26,7 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts({ copyDtsFiles: false }), react()],
+  plugins: [dts({ copyDtsFiles: false }), react(), svgr()],
   test: {
     globals: true,
     environment: 'jsdom',

@@ -44,6 +44,15 @@ declare module '@mui/material/styles/createTypography' {
     paragraphXSmall?: React.CSSProperties
   }
 }
+declare module '@mui/material/styles/createTheme' {
+  interface ThemeOptions {
+    borderRadius: string
+  }
+
+  interface Theme {
+    borderRadius: string
+  }
+}
 
 declare module '@mui/material/styles/createPalette' {
   interface ColorOptions {

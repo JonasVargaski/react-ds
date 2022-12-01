@@ -4,6 +4,7 @@ import { createBreakpoints } from '@mui/system'
 import { palette } from './colorPalette'
 
 const themeOptions: ThemeOptions = {
+  borderRadius: '4px',
   palette: {
     ...palette,
     primary: { main: palette.blue[400] },
