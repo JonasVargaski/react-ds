@@ -3,7 +3,7 @@ import { createBreakpoints } from '@mui/system'
 
 import { palette } from './colorPalette'
 
-const theme: ThemeOptions = {
+const themeOptions: ThemeOptions = {
   palette: {
     ...palette,
     primary: { main: palette.blue[400] },
@@ -88,4 +88,4 @@ const theme: ThemeOptions = {
   },
 }
 
-export default theme
+export { themeOptions }
