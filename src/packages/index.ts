@@ -3,6 +3,6 @@ export { Typography, type TypographyProps } from './components/Typography'
 export {
   OutlinedCheckButton,
   type OutlinedCheckButtonProps,
-} from './components/OutlinedCheckButton'
+} from './components/OutlinedCheckButton/OutlinedCheckButton'
 
 export * from './theme'
