@@ -1,7 +1,7 @@
-import { Stack, Typography } from '@mui/material'
+import { Stack, Typography, BoxProps } from '@mui/material'
 import { Container } from './styles'
 
-type OutlinedCheckButtonProps = {
+interface OutlinedCheckButtonProps extends Omit<BoxProps, 'onClick'> {
   fullWidth?: boolean
   title?: string
   description?: string
