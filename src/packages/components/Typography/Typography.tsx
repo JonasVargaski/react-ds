@@ -1,4 +1,4 @@
-import Typography, { TypographyProps as MuiTypographyProps } from '@mui/material/Typography'
+import MuiTypography, { TypographyProps as MuiTypographyProps } from '@mui/material/Typography'
 import { PaletteOptions } from '../../theme/light/colorPalette'
 
 interface TypographyProps extends Omit<MuiTypographyProps, 'variant' | 'color'> {
@@ -23,5 +23,7 @@ interface TypographyProps extends Omit<MuiTypographyProps, 'variant' | 'color'> 
     | 'paragraphXSmall'
   color?: keyof PaletteOptions
 }
+
+const Typography: React.FC<TypographyProps> = MuiTypography
 
 export { type TypographyProps, Typography }
