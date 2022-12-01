@@ -1,6 +1,12 @@
 import MuiTypography, { TypographyProps as MuiTypographyProps } from '@mui/material/Typography'
 import { PaletteOptions } from '../../theme/light/colorPalette'
 
+type NestedKeyOf<ObjectType extends object> = {
+  [Key in keyof ObjectType & (string | number)]: ObjectType[Key] extends object
+    ? `${Key}` | `${Key}.${NestedKeyOf<ObjectType[Key]>}`
+    : `${Key}`
+}[keyof ObjectType & (string | number)]
+
 interface TypographyProps extends Omit<MuiTypographyProps, 'variant' | 'color'> {
   variant?:
     | 'displayLarge'
@@ -21,7 +27,7 @@ interface TypographyProps extends Omit<MuiTypographyProps, 'variant' | 'color'> 
     | 'paragraphMedium'
     | 'paragraphSmall'
     | 'paragraphXSmall'
-  color?: keyof PaletteOptions
+  color?: NestedKeyOf<PaletteOptions>
 }
 
 const Typography: React.FC<TypographyProps> = MuiTypography

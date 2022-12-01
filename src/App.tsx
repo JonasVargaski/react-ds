@@ -5,7 +5,7 @@ export function App() {
   return (
     <div>
       <Button variant="secondary">AHUHAUHU</Button>
-      <Typography color="blue.300">ajashuas</Typography>
+      <Typography color="blue.200">ajashuas</Typography>
     </div>
   )
 }
