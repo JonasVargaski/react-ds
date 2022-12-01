@@ -1,6 +1,6 @@
 {
   "name": "@jonasvargaski/desing-system",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
